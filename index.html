@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Powered Blogging Platform</title>
+<link rel="stylesheet" href="style.css">
+<a href="admin.html"><button>⚙️ Admin</button></a>
+</head>
+
+<body>
+
+<header>
+    <h1>📝 AI-Powered Blogging Platform</h1>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search articles...">
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="SEO">SEO</option>
+            <option value="Blogging">Blogging</option>
+            <option value="Web Dev">Web Dev</option>
+            <option value="AI Generated">AI Generated</option>
+        </select>
+
+        <button onclick="toggleTheme()">🌙</button>
+    </div>
+</header>
+
+<section class="ai-generator">
+    <h2>🤖 AI Blog Generator</h2>
+
+    <input type="text" id="ai-topic" placeholder="Enter topic (e.g., SEO tips)">
+    <button onclick="generateAI()">Generate</button>
+
+    <div id="ai-output"></div>
+
+    <button onclick="saveAI()" id="saveBtn" style="display:none;">
+        Save as Post
+    </button>
+</section>
+
+<main id="blog-container"></main>
+
+<script src="posts.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

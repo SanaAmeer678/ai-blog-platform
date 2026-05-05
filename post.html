@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Post | AI-Powered Blogging Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="post-container">
+
+    <img id="post-image" style="width:100%; border-radius:10px; margin-bottom:20px;">
+
+    <h1 id="post-title"></h1>
+    <p class="meta" id="post-meta"></p>
+
+    <p id="post-content"></p>
+
+    <a href="index.html"><button>⬅ Back</button></a>
+
+    <!-- COMMENTS -->
+    <div class="comments-section">
+        <h3>💬 Comments</h3>
+
+        <input id="commentName" placeholder="Your name">
+        <textarea id="commentText" placeholder="Write comment..."></textarea>
+        <button onclick="addComment()">Post</button>
+
+        <div id="comments-list"></div>
+    </div>
+
+</div>
+
+<script src="posts.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

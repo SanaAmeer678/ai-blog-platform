@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">⚙️ Admin Panel</h1>
+
+<div class="post-container">
+
+    <input id="title" placeholder="Post Title"><br><br>
+    <textarea id="content" placeholder="Post Content"></textarea><br><br>
+
+    <input id="category" placeholder="Category"><br><br>
+    <input id="image" placeholder="Image URL"><br><br>
+
+    <button onclick="savePost()">💾 Save Post</button>
+
+    <hr>
+
+    <h2>📋 All Posts</h2>
+    <div id="admin-posts"></div>
+
+</div>
+
+<script src="posts.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
