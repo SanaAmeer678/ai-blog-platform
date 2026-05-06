@@ -6,11 +6,17 @@ const categoryFilter = document.getElementById("categoryFilter");
 function initPosts() {
     let saved = JSON.parse(localStorage.getItem("posts"));
 
+    // First time → save default posts
     if (!saved || saved.length === 0) {
         localStorage.setItem("posts", JSON.stringify(defaultPosts));
     } else {
-        // merge default + saved (important fix)
-        let merged = [...defaultPosts, ...saved];
+        // Prevent duplicates using ID
+        let existingIds = saved.map(p => p.id);
+
+        let newDefaults = defaultPosts.filter(p => !existingIds.includes(p.id));
+
+        let merged = [...saved, ...newDefaults];
+
         localStorage.setItem("posts", JSON.stringify(merged));
     }
 }
