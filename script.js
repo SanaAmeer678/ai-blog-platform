@@ -8,6 +8,10 @@ function initPosts() {
 
     if (!saved || saved.length === 0) {
         localStorage.setItem("posts", JSON.stringify(defaultPosts));
+    } else {
+        // merge default + saved (important fix)
+        let merged = [...defaultPosts, ...saved];
+        localStorage.setItem("posts", JSON.stringify(merged));
     }
 }
 
